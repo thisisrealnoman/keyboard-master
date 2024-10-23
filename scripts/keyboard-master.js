@@ -2,6 +2,8 @@ function play(){
     hideElementById('home-screen');
     hideElementById('final-score');
     showElementById('playground');
+    setTextElementById('life-score', 5);
+    setTextElementById('game-score', 0);
     continueGame();
 }
 
@@ -41,4 +43,10 @@ function gameOver(){
     showElementById('final-score');
     const lastScore = getTextElementById('game-score');
     setTextElementById('updated-final-score', lastScore);
+    const currentAlphabet = getElementTextById('current-alphabet');
+    removeBackgroundColorById(currentAlphabet);
 }
+
+
+
+    
